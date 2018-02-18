@@ -6,29 +6,30 @@
 body {
   font-family: 'Varela Round', sans-serif;
   background-color: var(--peach);
+  background-image: url(background.jpeg);
+  background-size: cover;
   display: flex;
   height: 100vh;
   width: 100vw;
-  overflow: hidden;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
+  background-position: center 90%;
+  overflow: hidden;
 }
 
-.pattern {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-}
-
-.pattern path {
-  fill: white;
+a {
+  text-decoration: none;
 }
 
 .content {
   position: relative;
+  text-align: center;
+  padding-bottom: 40vh;
   margin: auto;
+}
+
+.logo {
+  display: inline-block;
 }
 
 .logo path {
@@ -36,36 +37,61 @@ body {
 }
 
 .contact-details {
-  font-size: 1vw;
-  margin-top: 2vw;
-  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 4vw;
 }
 
-.email,
-.email:visited,
-.telephone,
-.telephone:visited {
+.link,
+.link:visited {
   color: var(--navy);
-  margin: 0.5vw 0;
-  display: block;
+  margin: 0.5vw;
+  padding: 0.5vw 1vw;
+  border-radius: 0.35vw;
+  border: 2px solid;
+}
+
+.link:hover {
+  background-color: var(--navy);
+  color: white;
+  border-color: var(--navy);
+}
+
+.icon {
+  margin-right: 0.5vw;
 }
 
 @media only screen and (orientation: landscape) {
-  .pattern svg {
-    width: 100%;
-  }
-
   .logo {
-    width: 20vw;
+    width: 13vw;
   }
 }
 
 @media only screen and (orientation: portrait) {
-  .pattern svg {
-    height: 100%;
+  .logo {
+    width: 22vh;
+    padding: 4vh;
   }
 
-  .logo {
-    width: 70vw;
+  .contact-details {
+    margin-top: 1vh;
+  }
+
+  .link,
+  .link:visited {
+    display: block;
+    text-align: left;
+    font-size: 3vh;
+    margin: 1vh 0px;
+    border-radius: 1vh;
+    padding: 1vh 2vh;
+    border-width: 0.2vh;
+  }
+
+  .icon {
+    margin-right: 2vw;
+  }
+
+  .content {
+    padding-bottom: 40vh;
   }
 }
